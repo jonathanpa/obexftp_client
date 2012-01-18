@@ -19,16 +19,16 @@ module ObexftpClient
     end
     
     def list
+      raw_list = Command.run(%{obexftp -b -l "#{@path}"})
+      folder_list = FilesListParser.parse_ls(raw_list, :folder)
+      file_list = FilesListParser.parse_ls(raw_list, :file)
+      
+      return {:folder_list => folder_list, :file_list => file_list}
       
     end
     
     def download(filename)
-      
+      return Command.run(%{obexftp -b -c "#{@path}" -g "#{filename}"})
     end
-    
-    def download_all
-      
-    end
-    
   end
 end
