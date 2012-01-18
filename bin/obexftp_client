@@ -2,4 +2,4 @@
 
 require 'obexftp_client'
 
-puts "prout"
+puts ObexftpClient::Command.run("ls ~")
