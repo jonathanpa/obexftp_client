@@ -1,0 +1,3 @@
+module ObexftpClient
+  VERSION = "0.0.1"
+end
