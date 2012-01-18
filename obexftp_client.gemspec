@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Jonathan Pares"]
   s.email       = ["jonathan.pares@gmail.com"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{Ruby obexftp client}
+  s.description = %q{This gem uses the obexftp command to list/download/upload files from/to bluetooth devices.}
 
   s.rubyforge_project = "obexftp_client"
 

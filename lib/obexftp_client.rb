@@ -1,5 +1,5 @@
 require "obexftp_client/version"
+require "obexftp_client/command"
 
 module ObexftpClient
-  # Your code goes here...
 end
