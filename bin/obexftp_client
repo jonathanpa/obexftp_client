@@ -2,4 +2,5 @@
 
 require 'obexftp_client'
 
-puts ObexftpClient::Command.run("ls ~")
+my_ui = ObexftpClient::Ui.new
+my_ui.run
