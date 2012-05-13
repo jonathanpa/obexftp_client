@@ -2,5 +2,11 @@
 
 require 'obexftp_client'
 
-my_ui = ObexftpClient::Ui.new
-my_ui.run
+if ARGV.size != 1
+  puts "Usage:"
+  puts "$obexftp_client <bluetooth_device_address>"
+  puts "To list the files of a specific bluetooth device."
+else
+  my_ui = ObexftpClient::Ui.new ARGV[0]
+  my_ui.run
+end

@@ -1,8 +1,8 @@
 module ObexftpClient
   class Ui
 
-    def initialize
-      @client = Client.new
+    def initialize(device)
+      @client = Client.new(device)
       @stop = false
     end
 
@@ -11,7 +11,7 @@ module ObexftpClient
       list
       puts_prompt
       while ! @stop do
-        command_line = gets
+        command_line = STDIN.gets
         parse_input(command_line)
         puts_prompt
       end
@@ -22,10 +22,8 @@ module ObexftpClient
 
       matchdata = command_line.match('(\w+) "([\w+\.?\s?]+)"')
       if matchdata != nil
-
         command = matchdata[1]
         argument = matchdata[2]
-
 
         case command
         when "cd" then
@@ -40,7 +38,6 @@ module ObexftpClient
 
         matchdata = command_line.match('(\w+)')
         command = matchdata[1]
-
 
         case command
         when "ls" then
