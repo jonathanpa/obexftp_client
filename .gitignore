@@ -5,3 +5,4 @@ pkg/*
 /nbproject/
 /pkg/
 /*.swp
+.rvmrc
