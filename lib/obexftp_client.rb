@@ -4,7 +4,7 @@ require "obexftp_client/client"
 require "obexftp_client/command"
 require "obexftp_client/files_list_parser"
 
-require "omg"
+#require "omg"
 
 require "nokogiri"
 
