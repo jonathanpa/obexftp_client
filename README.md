@@ -68,7 +68,7 @@ R-   Received files
 / >
 cd "Memory card"
 /Memory card >
-``
+```
 
 ### How to download a file ?
 Use the command download followed by the name of file surrounded by ".
