@@ -5,7 +5,7 @@ module ObexftpClient
 
     def initialize(device_to_scan)
       @device = device_to_scan
-      @path ="/"
+      @path   = "/"
     end
 
     def cd(path)
@@ -21,11 +21,11 @@ module ObexftpClient
     end
 
     def list
-      raw_list = Command.run(%{obexftp -b #{@device} -l "#{@path}"})
+      raw_list    = Command.run(%{obexftp -b #{@device} -l "#{@path}"})
       folder_list = FilesListParser.parse_ls(raw_list, :folder)
-      file_list = FilesListParser.parse_ls(raw_list, :file)
+      file_list   = FilesListParser.parse_ls(raw_list, :file)
 
-      return {:folder_list => folder_list, :file_list => file_list}
+      return { folder_list: folder_list, file_list: file_list }
     end
 
     def download(filename)

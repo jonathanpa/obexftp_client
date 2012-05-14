@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.email       = ["jonathan.pares@gmail.com"]
   s.homepage    = ""
   s.summary     = %q{Ruby obexftp client}
-  s.description = %q{This gem uses the obexftp command to list/download/upload files from/to bluetooth devices.}
+  s.description = %q{This gem uses the obexftp command to list/download files from/to bluetooth devices.}
 
   s.rubyforge_project = "obexftp_client"
 

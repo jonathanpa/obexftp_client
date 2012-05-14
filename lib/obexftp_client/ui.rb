@@ -3,7 +3,7 @@ module ObexftpClient
 
     def initialize(device)
       @client = Client.new(device)
-      @stop = false
+      @stop   = false
     end
 
     def run
@@ -15,14 +15,13 @@ module ObexftpClient
         parse_input(command_line)
         puts_prompt
       end
-
     end
 
     def parse_input(command_line)
-
       matchdata = command_line.match('(\w+) "([\w+\.?\s?]+)"')
+      
       if matchdata != nil
-        command = matchdata[1]
+        command  = matchdata[1]
         argument = matchdata[2]
 
         case command
@@ -37,7 +36,7 @@ module ObexftpClient
       else
 
         matchdata = command_line.match('(\w+)')
-        command = matchdata[1]
+        command   = matchdata[1]
 
         case command
         when "ls" then
@@ -74,7 +73,7 @@ module ObexftpClient
 
     def puts_list(list)
       folder_list = list[:folder_list]
-      file_list = list[:file_list]
+      file_list   = list[:file_list]
 
       folder_list.each do |node|
         puts "R-   #{node["name"]}"
